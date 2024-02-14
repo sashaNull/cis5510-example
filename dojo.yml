@@ -1,6 +1,6 @@
 id: example
 name: Example Dojo
-type: course
+type: public
 award:
   emoji: 😀
 modules:
