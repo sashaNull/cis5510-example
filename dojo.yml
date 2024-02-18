@@ -6,7 +6,7 @@ description: |
   Sample specific topics include: passwords and offline attacks, DES, RSA, DSA, SHA, SSL, CBC, IPSec, SET, DDoS attacks, biometric authentication, PKI, smart cards, S/MIME, privacy on the Web, viruses, security models, wireless security, and sandboxing. 
 
 type: public
-emoji: 🛡️
+emoji: :shield:
 modules:
   - id: hello
   - id: world
