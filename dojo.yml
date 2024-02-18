@@ -1,5 +1,7 @@
 id: cis5510
 name: CIS 5510 - Spring 2024
+award:
+  emoji: 🛡️
 description: |
   This is an introduction to topics in the security of computer systems and communication on networks of computers. 
   The course covers four major areas: fundamentals of cryptography, security for communication protocols, security for operating systems and mobile programs, and security for electronic commerce. 
@@ -7,8 +9,6 @@ description: |
 
   You can find the syllabus here: https://www.cis.upenn.edu/~sga001/classes/cis551s24/
 type: public
-award:
-  emoji: :shield:
 modules:
   - id: hello
   - id: world
