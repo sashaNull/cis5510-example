@@ -1,7 +1,7 @@
 id: cis5510
 name: CIS 5510 - Spring 2024
 award:
-  emoji: 🛡️
+  emoji: 🛡
 description: |
   This is an introduction to topics in the security of computer systems and communication on networks of computers. 
   The course covers four major areas: fundamentals of cryptography, security for communication protocols, security for operating systems and mobile programs, and security for electronic commerce. 
