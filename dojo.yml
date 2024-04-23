@@ -52,7 +52,7 @@ modules:
         
         The dojo infrastructure has already installed these tools, with GEF and pwndbg located in `/opt/pwn.college`, Ghidra, IDA, and Binary Ninja available in the GUI session for exploration, and pwntools accessible for Python scripting.
         
-        To switch from GDB to either GEF or Pwndbg, you can execute one of the following commands: `echo "source /opt/gef/gef.py" > ~/.gdbinit` or `echo "source /opt/pwndbg/gdbinit.py" > ~/.gdbinit`
+        To switch from GDB to either GEF or pwndbg, you can execute one of the following commands: `echo "source /opt/gef/gef.py" > ~/.gdbinit` or `echo "source /opt/pwndbg/gdbinit.py" > ~/.gdbinit`
         
         Feel free to utilize these tools according to your debugging and reverse engineering requirements, and don't hesitate to experiment and explore their functionalities further.
     challenges:
