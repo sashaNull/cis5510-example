@@ -38,7 +38,8 @@ int main(int argc, char *argv[]) {
 
   strcpy(class, "EAS5120");
 
-  printf("Enter your Pennkey: ");
+  printf("Enter your Pennkey: \n");
+
   read(0, pennkey, 20);
 
   if (strlen(pennkey) > 10) {
