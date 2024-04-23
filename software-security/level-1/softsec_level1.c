@@ -33,14 +33,18 @@ void win() {
 }
 
 int main(int argc, char *argv[]) {
-  char class[8];
-  char pennkey[7];
+  char class[10];
+  char pennkey[8];
 
   strcpy(class, "EAS5120");
 
   printf("Enter your Pennkey: \n");
 
   gets(pennkey);
+
+  if (strlen(pennkey) > 8) {
+    printf("Invalid: Pennkey length must be <= 8!\n");
+  }
 
   if (strcmp(class, "EAS5120") == 0) {
     printf("Hey %s! You are enrolled in %s.\n", pennkey, class);
