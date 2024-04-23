@@ -12,7 +12,7 @@ description: |
 type: course
 
 award:
-  emoji: red
+  belt: red
 
 modules:
   - id: software-security
