@@ -26,10 +26,7 @@ modules:
       Do you possess the ability to fully manipulate advanced software with state-of-the-art security measures? 
       
       Keep advancing into the realm of cybersecurity, utilizing this training ground to enrich your understanding of the mystical knowledge that fuels your digital wizardry.
-    challenges:
-    - id: level-1
-      name: level1
-      description: Overwrite a buffer on the stack to set the right conditions to obtain the flag!
+    resources:
     - name: Resources and Guidelines
       type: markdown
       content: |
@@ -42,5 +39,8 @@ modules:
         - The dojo infrastructure has already installed these tools, with GEF and pwndbg located in `/opt/pwn.college`, Ghidra, IDA, and Binary Ninja available in the GUI session for exploration, and pwntools accessible for Python scripting.
         - To switch from GDB to either GEF or Pwndbg, you can execute one of the following commands: `echo "source /opt/gef/gef.py" > ~/.gdbinit` or `echo "source /opt/pwndbg/gdbinit.py" > ~/.gdbinit`
         - Feel free to utilize these tools according to your debugging and reverse engineering requirements, and don't hesitate to experiment and explore their functionalities further.
-
-
+    challenges:
+    - id: level-1
+      name: level1
+      description: Overwrite a buffer on the stack to set the right conditions to obtain the flag!
+    
