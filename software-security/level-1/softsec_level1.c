@@ -42,8 +42,10 @@ int main(int argc, char *argv[]) {
 
   gets(pennkey);
 
-  if (strlen(pennkey) > 8) {
+  if(strlen(pennkey) > 8)
+  {
     printf("Invalid: Pennkey length must be <= 8!\n");
+    exit(0);
   }
 
   if (strcmp(class, "EAS5120") == 0) {
