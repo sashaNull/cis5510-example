@@ -65,3 +65,6 @@ modules:
     - id: level-3
       name: level3
       description: Write a full exploit involving shellcode and a method of tricking the challenge into executing it.
+    - id: level-4
+      name: level4
+      description: Write a full exploit involving shellcode and a method of tricking the challenge into executing it. This time, you can't just read the flag directly. Channel your inner hacker and try popping a shell like a real pro!
