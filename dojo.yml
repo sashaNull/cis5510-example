@@ -30,14 +30,25 @@ modules:
     - name: Resources and Guidelines
       type: markdown
       content: |
-        - **Control Hijacking**
+        - **Control Hijacking:**
           
           Before you begin this project, please read "[Smashing the Stack for Fun and Profit](https://cis.upenn.edu/~cis5510/resources/stack-smashing.pdf)".
-        - **GDB** You will need to make extensive use of the GDB debugger. Useful commands that you may not know are “disassemble”, “info reg”, “x”, and “stepi”. See the built-in GDB help for details, and don’t be afraid to experiment! [This](https://www.cis.upenn.edu/~cis5510/resources/gdb-refcard.pdf) quick reference may also be useful.
-        - **GEF (GDB Enhanced Features)** GEF enhances your debugging experience within GDB by providing additional features and functionalities. It offers a variety of commands and extensions tailored for exploit development and reverse engineering tasks. To get started with GEF, you can refer to the tutorial [here](https://github.com/guyinatuxedo/nightmare/tree/master/modules/02-intro_tooling/gdb-gef).
-        - **pwndbg** Pwndbg is another GDB enhancement focused on exploit development and reverse engineering. Similar to GEF, it provides various features to streamline the debugging process and analyze binaries effectively. You can find a tutorial on Pwndbg [here](https://tc.gts3.org/cs6265/2020/tut/tut02-warmup2.html).
-        - **Ghidra** Ghidra is a powerful, open-source software reverse engineering suite developed by the National Security Agency (NSA). It offers a wide range of features for analyzing binaries, including disassembly, decompilation, and scripting capabilities. You can access Ghidra through the GUI session of the dojo infrastructure. To learn more about Ghidra's capabilities and usage, you can explore the tutorial [here](https://github.com/guyinatuxedo/nightmare/tree/master/modules/02-intro_tooling/ghidra)
-        - **pwntools** pwntools is a Python library designed for exploit development and binary manipulation. It simplifies the process of interacting with binaries and facilitates the creation of exploits. You can find tutorials and documentation for pwntools [here](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf).
+        - **GDB:** 
+        
+          You will need to make extensive use of the GDB debugger. Useful commands that you may not know are “disassemble”, “info reg”, “x”, and “stepi”. See the built-in GDB help for details, and don’t be afraid to experiment! [This](https://www.cis.upenn.edu/~cis5510/resources/gdb-refcard.pdf) quick reference may also be useful.
+          
+        - **GEF (GDB Enhanced Features)**
+          
+          GEF enhances your debugging experience within GDB by providing additional features and functionalities. It offers a variety of commands and extensions tailored for exploit development and reverse engineering tasks. To get started with GEF, you can refer to the tutorial [here](https://github.com/guyinatuxedo/nightmare/tree/master/modules/02-intro_tooling/gdb-gef).
+        - **pwndbg**
+          
+          Pwndbg is another GDB enhancement focused on exploit development and reverse engineering. Similar to GEF, it provides various features to streamline the debugging process and analyze binaries effectively. You can find a tutorial on Pwndbg [here](https://tc.gts3.org/cs6265/2020/tut/tut02-warmup2.html).
+        - **Ghidra**
+          
+          Ghidra is a powerful, open-source software reverse engineering suite developed by the National Security Agency (NSA). It offers a wide range of features for analyzing binaries, including disassembly, decompilation, and scripting capabilities. You can access Ghidra through the GUI session of the dojo infrastructure. To learn more about Ghidra's capabilities and usage, you can explore the tutorial [here](https://github.com/guyinatuxedo/nightmare/tree/master/modules/02-intro_tooling/ghidra)
+        - **pwntools**
+          
+          pwntools is a Python library designed for exploit development and binary manipulation. It simplifies the process of interacting with binaries and facilitates the creation of exploits. You can find tutorials and documentation for pwntools [here](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf).
         
         The dojo infrastructure has already installed these tools, with GEF and pwndbg located in `/opt/pwn.college`, Ghidra, IDA, and Binary Ninja available in the GUI session for exploration, and pwntools accessible for Python scripting.
         
