@@ -59,4 +59,7 @@ modules:
     - id: level-1
       name: level1
       description: Overwrite a buffer on the stack to set the right conditions to obtain the flag!
-    
+    challenges:
+    - id: level-2
+      name: level2
+      description: Overflow a buffer and smash the stack to obtain the flag!
