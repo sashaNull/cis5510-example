@@ -40,12 +40,7 @@ int main(int argc, char *argv[]) {
 
   printf("Enter your Pennkey: \n");
 
-  read(0, pennkey, 20);
-
-  if (strlen(pennkey) > 10) {
-    printf("Invalid: Pennkey length must be <= 10!\n");
-    exit(1);
-  }
+  gets(pennkey);
 
   if (strcmp(class, "EAS5120") == 0) {
     printf("Hey %s! You are enrolled in %s.\n", pennkey, class);
