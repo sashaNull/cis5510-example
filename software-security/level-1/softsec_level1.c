@@ -1,3 +1,4 @@
+// gcc softsec_level1.c -o softsec_level1 -Wno-implicit-function-declaration
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
