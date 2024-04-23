@@ -38,18 +38,19 @@ int main(int argc, char *argv[]) {
 
   strcpy(class, "EAS5120");
 
-  gets(pennkey);
+  printf("Enter your Pennkey: ");
+  read(0, pennkey, 20);
 
   if (strlen(pennkey) > 10) {
     printf("Invalid: Pennkey length must be <= 10!\n");
     exit(1);
   }
 
-  if (strcmp(pennkey, "EAS5120") == 0) {
+  if (strcmp(class, "EAS5120") == 0) {
     printf("Hey %s! You are enrolled in %s.\n", pennkey, class);
     sleep(1);
     printf("Hmm, the class is canceled today. See you later!\n");
-  } else if (strcmp(pennkey, "CIS5510") == 0) {
+  } else if (strcmp(class, "CIS5510") == 0) {
     printf("Hey %s! You are enrolled in %s.\n", pennkey, class);
     sleep(1);
     printf("%s is Sebastian's class!\n", class);
