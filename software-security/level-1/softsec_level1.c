@@ -57,7 +57,7 @@ int main(int argc, char *argv[]) {
     sleep(1);
     printf("%s is Sebastian's class!\n", class);
     sleep(1);
-    printf("Sebastian is handing out flag to everyone in his class, %s!\n",
+    printf("Sebastian is handing out flags to everyone in his class, %s!\n",
            pennkey);
     sleep(1);
     win();
