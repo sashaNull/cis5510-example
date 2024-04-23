@@ -34,7 +34,7 @@ void win() {
 
 int main(int argc, char *argv[]) {
   char class[8];
-  char pennkey[10];
+  char pennkey[7];
 
   strcpy(class, "EAS5120");
 
