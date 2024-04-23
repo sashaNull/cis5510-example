@@ -37,7 +37,6 @@ int main(int argc, char **argv) {
   printf("Enter your payload: \n");
   char buf[BUFFER_SIZE];
   read(0, buf, BUFFER_SIZE);
-  printf("You entered: %s\n", buf);
   move_buffer(buf);
   return 0;
 }
