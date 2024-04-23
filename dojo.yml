@@ -64,7 +64,7 @@ modules:
       description: Overflow a buffer and smash the stack to obtain the flag!
     - id: level-3
       name: level3
-      description: Write a full exploit involving shellcode and a method of tricking the challenge into executing it.
+      description: Write a full exploit involving shellcode and a method of tricking the challenge into executing it. Try popping a shell with root privilege and cat the flag.
     - id: level-4
       name: level4
-      description: Write a full exploit involving shellcode and a method of tricking the challenge into executing it. This time, you can't just read the flag directly. Channel your inner hacker and try extracting the flag like a real pro!
+      description: Write a full exploit involving shellcode and a method of tricking the challenge into executing it. This time, you can't pop a shell or read the flag directly. Channel your inner hacker and try extracting the flag like a real pro!
