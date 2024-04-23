@@ -12,7 +12,7 @@ description: |
 type: course
 
 award:
-  belt: Bunny
+  belt: bunny
 
 modules:
   - id: software-security
