@@ -29,7 +29,7 @@ void move_buffer(char *arg) {
   printf("Dest Address: %p\n", &buf);
   printf("MOVING.............\n");
   sleep(1);
-  memcpy(buf, arg, sizeof(buf) + 0x1d);
+  memcpy(buf, arg, sizeof(buf) + 0x17);
   printf("FLUSH..............\n");
   sleep(1);
   memset(arg, '\0', BUFFER_SIZE);
