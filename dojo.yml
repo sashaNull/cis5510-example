@@ -68,3 +68,6 @@ modules:
     - id: level-4
       name: level4
       description: Write a full exploit involving shellcode and a method of tricking the challenge into executing it. This time, you can't pop a shell or read the flag directly. Channel your inner hacker and try extracting the flag like a real pro!
+    - id: level-5
+      name: level5
+      description: Write a full exploit involving shellcode and a method of tricking the challenge into executing it. This time, the stack canary's enabled. Can you defeat it?
