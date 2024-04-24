@@ -1,4 +1,4 @@
-// gcc ./softsec_level2.c -o softsec_level2 -fno-PIE -fno-stack-protector -no-pie
+// gcc ./softsec_level2.c -o softsec_level2 -fno-PIE -no-pie -fno-stack-protector
 #include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>

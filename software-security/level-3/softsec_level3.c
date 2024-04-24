@@ -1,4 +1,4 @@
-// gcc ./softsec_level3.c -o softsec_level3 -fno-PIE -fno-stack-protector -no-pie -z execstack
+// gcc ./softsec_level3.c -o softsec_level3 -fno-stack-protector -z execstack
 #include <assert.h>
 #include <fcntl.h>
 #include <stdio.h>
