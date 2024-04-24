@@ -1,4 +1,4 @@
-// gcc ./softsec_level4.c -o softsec_level4 -fno-stack-protector -z execstack -lseccomp
+// gcc ./softsec_level4.c -o softsec_level4 -fno-stack-protector -z execstack
 #include <assert.h>
 #include <fcntl.h>
 #include <seccomp.h>
@@ -22,20 +22,6 @@ disable_aslr(int argc, char **argv, char **envp) {
   }
 }
 
-void restrict_syscall() {
-  scmp_filter_ctx ctx;
-  puts("Restricting system calls (default: kill).\n");
-  ctx = seccomp_init(SCMP_ACT_KILL);
-  printf("Allowing syscall: %s (number %i).\n", "read", SCMP_SYS(read));
-  assert(seccomp_rule_add(ctx, SCMP_ACT_ALLOW, SCMP_SYS(read), 0) == 0);
-  printf("Allowing syscall: %s (number %i).\n", "open", SCMP_SYS(open));
-  assert(seccomp_rule_add(ctx, SCMP_ACT_ALLOW, SCMP_SYS(open), 0) == 0);
-  printf("Allowing syscall: %s (number %i).\n", "exit", SCMP_SYS(exit));
-  assert(seccomp_rule_add(ctx, SCMP_ACT_ALLOW, SCMP_SYS(exit), 0) == 0);
-
-  assert(seccomp_load(ctx) == 0);
-}
-
 void move_buffer(char *arg) {
   char buf[107];
   printf("Src Address: %p\n", arg);
@@ -46,13 +32,21 @@ void move_buffer(char *arg) {
   printf("FLUSH..............\n");
   sleep(1);
   memset(arg, '\0', BUFFER_SIZE);
-  restrict_syscall();
 }
 
 int main() {
   printf("Enter your payload: \n");
   char buf[BUFFER_SIZE];
   read(0, buf, BUFFER_SIZE);
+
+  for (int i = 0; i < BUFFER_SIZE; i++) {
+    uint16_t *hword = (uint16_t *)((uint8_t *)buf + i);
+    if (*hword == 0x80cd || *hword == 0x340f || *hword == 0x050f) {
+      printf("hword at %d is not allowed!\n", i);
+      exit(1);
+    }
+  }
+
   move_buffer(buf);
   return 0;
 }
