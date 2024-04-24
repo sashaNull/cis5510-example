@@ -1,4 +1,4 @@
-// gcc ./softsec_level5.c -o softsec_level5 -z execstack
+// gcc ./softsec_level5.c -o softsec_level5 -fno-stack-protector -z execstack
 #include <assert.h>
 #include <fcntl.h>
 #include <stdio.h>
