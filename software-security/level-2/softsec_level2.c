@@ -10,8 +10,8 @@ int flag_fd;
 int euid;
 ssize_t bytes_read;
 
-void win(int password) {
-  if (password == 0x31337) {
+void win(int pennkey) {
+  if (pennkey == 0x31337) {
     printf("Congratulations! You win! Here is your flag:\n");
     flag_fd = open("/flag", O_RDONLY);
 
