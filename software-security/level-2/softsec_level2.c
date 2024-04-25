@@ -5,10 +5,11 @@
 #include <string.h>
 #include <unistd.h>
 
+char buffer[256];
+
 void win(int password) {
   if (password == 0x31337) {
     printf("Congratulations! You win! Here is your flag:\n");
-    char buffer[256];
     int flag_fd = open("/flag", O_RDONLY);
 
     if (flag_fd >= 0) {
