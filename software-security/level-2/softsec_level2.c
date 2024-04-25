@@ -5,30 +5,34 @@
 #include <string.h>
 #include <unistd.h>
 
-void win() {
-  char buffer[256];
-  int flag_fd = open("/flag", O_RDONLY);
+void win(int password) {
+  if (password != 0x31337) {
+    printf("Congratulations! You win! Here is your flag:\n");
+    char buffer[256];
+    int flag_fd = open("/flag", O_RDONLY);
 
-  printf("Congratulations! You win! Here is your flag:\n");
-
-  if (flag_fd >= 0) {
-    int bytes_read = read(flag_fd, buffer, sizeof(buffer));
-    if (bytes_read > 0) {
-      write(1, buffer, bytes_read);
-      printf("\n");
-      close(flag_fd);
+    if (flag_fd >= 0) {
+      int bytes_read = read(flag_fd, buffer, sizeof(buffer));
+      if (bytes_read > 0) {
+        write(1, buffer, bytes_read);
+        printf("\n");
+        close(flag_fd);
+      } else {
+        printf("ERROR: Failed to read the flag!\n");
+      }
     } else {
       printf("ERROR: Failed to read the flag!\n");
-    }
-  } else {
-    printf("ERROR: Failed to read the flag!\n");
 
-    int euid = geteuid();
-    if (euid) {
-      printf("Your effective user id is not 0!\n");
-      printf("You must directly run the suid binary in order to have the "
-             "correct permissions!\n");
+      int euid = geteuid();
+      if (euid) {
+        printf("Your effective user id is not 0!\n");
+        printf("You must directly run the suid binary in order to have the "
+               "correct permissions!\n");
+      }
     }
+
+  } else {
+    printf("Incorrect password!\n");
   }
 }
 
