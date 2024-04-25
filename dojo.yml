@@ -74,3 +74,6 @@ modules:
     - id: level-6
       name: level6
       description: Write a full exploit involving shellcode and a method of tricking the challenge into executing it. We've implemented some mitigations that ensure the binary is perfectly secure (!?). Can you channel your inner hacker and get the flag like a real pro?
+    - id: level-7
+      name: level7
+      description: Xi quach
