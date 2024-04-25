@@ -77,6 +77,3 @@ modules:
     - id: level-7
       name: level7
       description: This time, DEP is active, so your shellcode injection won't work anymore. Your only shot is to get hands-on with machine code manipulation like a true assembly wizard.
-    - id: level-8
-      name: level8
-      description: Hello
