@@ -76,4 +76,7 @@ modules:
       description: Write a full exploit involving shellcode and a method of tricking the challenge into executing it. We've implemented some mitigations that ensure the binary is perfectly secure (!?). Can you channel your inner hacker and get the flag like a real pro?
     - id: level-7
       name: level7
-      description: Xi quach
+      description: This time, DEP is active, so your shellcode injection won't work anymore. Your only shot is to get hands-on with machine code manipulation like a true assembly wizard.
+    - id: level-8
+      name: level8
+      description: Hello
