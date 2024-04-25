@@ -1,5 +1,4 @@
-// gcc ./softsec_level6.c -o softsec_level6 -fno-stack-protector -z execstack
-// -lseccomp
+// gcc ./softsec_level6.c -o softsec_level6 -fno-stack-protector -z execstack -lseccomp
 #include <assert.h>
 #include <seccomp.h>
 #include <stdint.h>
@@ -71,7 +70,7 @@ void read_file(char *name) {
   if (!buf) {
     return;
   }
-  printf("Reading element to buffer at %p!", buf);
+  printf("Reading element to buffer at %p!\n", buf);
   sleep(1);
 
   read_elements(f, buf, record_num);
