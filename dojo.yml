@@ -70,4 +70,7 @@ modules:
       description: Write a full exploit involving shellcode and a method of tricking the challenge into executing it. This time, the inputted data cannot contain some forbidden bytes. What are they? Can you defeat this? 
     - id: level-5
       name: level5
-      description: Write a full exploit involving shellcode and a method of tricking the challenge into executing it. Oh, and this time, forget about tampering with the return address... Wait, is there a way?
+      description: Write a full exploit involving shellcode and a method of tricking the challenge into executing it. Oh, and this time, forget about tampering with the return address...
+    - id: level-6
+      name: level6
+      description: Write a full exploit involving shellcode and a method of tricking the challenge into executing it. We've implemented some mitigations that ensure the binary is perfectly secure (!?). Can you channel your inner hacker and get the flag like a real pro?

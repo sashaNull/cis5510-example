@@ -1,7 +1,7 @@
 // gcc ./softsec_level4.c -o softsec_level4 -fno-stack-protector -z execstack
 #include <assert.h>
 #include <fcntl.h>
-#include <seccomp.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
