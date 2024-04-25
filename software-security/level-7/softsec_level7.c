@@ -8,7 +8,7 @@
 #include <unistd.h>
 
 void cis551_greeting(void) {
-  system("echo CIS551 is awesome!");
+  system("find .");
 }
 
 void copy_buffer(char *arg) {
