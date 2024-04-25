@@ -6,14 +6,17 @@
 #include <unistd.h>
 
 char buffer[256];
+int flag_fd;
+int euid;
+ssize_t bytes_read;
 
 void win(int password) {
   if (password == 0x31337) {
     printf("Congratulations! You win! Here is your flag:\n");
-    int flag_fd = open("/flag", O_RDONLY);
+    flag_fd = open("/flag", O_RDONLY);
 
     if (flag_fd >= 0) {
-      int bytes_read = read(flag_fd, buffer, sizeof(buffer));
+      bytes_read = read(flag_fd, buffer, sizeof(buffer));
       if (bytes_read > 0) {
         write(1, buffer, bytes_read);
         printf("\n");
@@ -24,7 +27,7 @@ void win(int password) {
     } else {
       printf("ERROR: Failed to read the flag!\n");
 
-      int euid = geteuid();
+      euid = geteuid();
       if (euid) {
         printf("Your effective user id is not 0!\n");
         printf("You must directly run the suid binary in order to have the "
