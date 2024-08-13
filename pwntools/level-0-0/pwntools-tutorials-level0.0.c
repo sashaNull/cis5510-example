@@ -3,8 +3,6 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <errno.h>
-#include"util.h"
-
 
 void print_flag()
 {
@@ -31,7 +29,7 @@ void print_flag()
 
 int bypass_me(char *buf)
 {	
-	if (!strncmp(buf, "pokemon", 7)) {
+	if (!strncmp(buf, "cis5510", 7)) {
 		return 1;
 	}
 	
@@ -42,9 +40,9 @@ int main()
 {
 	char buffer[100];
 
-	print_desc();
-
 	fgets(buffer, sizeof(buffer), stdin);
+	
+	printf("Hi! I challenge you to use pwntools to pwn me :)\n");
 
 	if (bypass_me(buffer)) {
 		print_flag();
@@ -53,6 +51,5 @@ int main()
 		printf("Please refer to the source code to understand these conditions\n");	
 	}
 
-	print_exit();
 	return 0;
 }
