@@ -55,6 +55,5 @@ int main()
 		printf("Please refer to the source code to understand these conditions\n");	
 	}
 
-	print_exit();
 	return 0;
 }

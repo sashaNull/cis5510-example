@@ -14,7 +14,7 @@ p = process(challenge_path)
 
 payload = b'FIXME'
 # Send the payload after the string ":)\n###\n" is found.
-p.sendafter(":)\n###\n", payload)
+p.sendafter("pwn me :)\n", payload)
 
 # Receive flag from the process
 flag = p.recvline()

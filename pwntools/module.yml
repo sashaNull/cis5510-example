@@ -41,4 +41,5 @@ resources:
    - name: "References"
      type: markdown
      content: |
-       - [Pwntools Tutorials](https://docs.pwntools.com/en/stable/)
+       - [Pwntools Cheatsheet](https://gist.github.com/anvbis/64907e4f90974c4bdd930baeb705dedf)
+       - [Pwntools Docs](https://docs.pwntools.com/en/stable/)
