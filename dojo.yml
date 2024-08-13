@@ -15,6 +15,7 @@ award:
   belt: bunny
 
 modules:
+  - id: pwntools
   - id: software-security
     name: Software Security
     description: |
