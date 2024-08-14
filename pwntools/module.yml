@@ -37,6 +37,9 @@ challenges:
   - id: level-4-0
     name: Level 4.0
 
+  - id: level-5-0
+    name: Level 5.0
+
 resources:
    - name: "References"
      type: markdown
