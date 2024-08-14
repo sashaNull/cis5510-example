@@ -223,12 +223,12 @@ class ASMChallenge(ASMBase):
     def description(self):
         return f"""
         In this level you need to craft assembly code to satisfy the following conditions:
-        * rax = 0x12345678
+        * rax = 0xdeadbeef
         """
 
     def trace(self):
         self.start()
-        return self.rax == 0x12345678
+        return self.rax == 0xdeadbeef
 
 def main():
     challenge = ASMChallenge()

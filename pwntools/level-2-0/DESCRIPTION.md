@@ -17,8 +17,14 @@ challenge_path = "/challenge/pwntools-tutorials-level2.0"
 
 p = process(challenge_path)
 
-# Send the payload after the string "(up to 0x1000 bytes): \n" is found.
-p.sendafter("Please give me your assembly in bytes", asm("NOP"))
+shellcode = """
+    nop
+"""
 
-print_lines(p)
+payload = asm(shellcode)
+
+# Send the payload after the string "(up to 0x1000 bytes): \n" is found.
+p.sendafter("Please give me your assembly in bytes", payload)
+
+p.interactive()
 ```
