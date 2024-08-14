@@ -1,0 +1,1 @@
+In this level, you need to generate shellcode that will read the flag using `pwntools`. You'll need to use the `pwntools.shellcraft` module to automatically create the necessary assembly instructions and system calls for reading the flag from the system.

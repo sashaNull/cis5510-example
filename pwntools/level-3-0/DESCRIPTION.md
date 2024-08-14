@@ -1,1 +1,1 @@
-当前关卡需要你阅读挑战关卡的 `bypass_me` 函数，使用 `pwntools` 完成本关卡挑战。接下来，你需要使用 `pwntools` 中的交互 API 编写利用脚本，发送特定输入绕过检查，并读取 `/flag`。
+In this level, you'll need to analyze the bypass_me function in the challenge and use pwntools to solve it. Your next step is to use the interaction API in pwntools to write an exploit script, send the right input to bypass the checks, and retrieve the /flag.

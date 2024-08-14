@@ -1,6 +1,6 @@
-This level is a tutorial and relatively simple. You can directly run /challenge/pwntools-tutorials-level0.0 in the terminal and then input a specific string (which you can find by reading the bypass_me function), but that is not the goal of this level.
+This level is a tutorial and fairly straightforward. You could just run `/challenge/pwntools-tutorials-level0.0` in the terminal and enter a specific string (which you can find by reading the `bypass_me` function), but that’s not the main goal here.
 
-This level will guide you on how to use pwntools to complete the challenge. Next, you need to use the `process`, `send`, `recv`, and other APIs in pwntools to write an exploit script, send a specific input to bypass the check, and read the /flag. Please refer to the following pwntools example code (hint: be sure to replace `FIXME` with the specific string mentioned above):
+This level is designed to teach you how to use pwntools to complete the challenge. Your task is to use the `process`, `send`, `recv`, and other pwntools APIs to write an exploit script, send the right input to bypass the check, and retrieve the flag. Check out the example pwntools code below (hint: don’t forget to replace `FIXME` with the specific string mentioned earlier):
 
 ```
 from pwn import *
@@ -13,7 +13,7 @@ challenge_path = "/challenge/pwntools-tutorials-level0.0"
 p = process(challenge_path)
 
 payload = b'FIXME'
-# Send the payload after the string ":)\n###\n" is found.
+# Send the payload after the string "pwn me :)\n" is found.
 p.sendafter("pwn me :)\n", payload)
 
 # Receive flag from the process

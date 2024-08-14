@@ -39,7 +39,9 @@ int bypass_me(char *buf)
 int main()
 {
 	char buffer[100];
+
 	printf("Hi! I challenge you to use pwntools to pwn me :)\n");
+
 	fgets(buffer, sizeof(buffer), stdin);
 
 	if (bypass_me(buffer)) {

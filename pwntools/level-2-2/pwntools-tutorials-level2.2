@@ -13,8 +13,6 @@ from unicorn.x86_const import *
 from capstone import *
 
 sys.path.append('/challenge/')
-from util import *
-
 pwnlib.context.context.update(arch="amd64")
 builtin_print = print
 print = lambda text: builtin_print(re.sub("\n{2,}", "\n\n", textwrap.dedent(str(text))))
@@ -121,7 +119,6 @@ class ASMBase:
         self.emu.emu_start(begin, until)
 
     def run(self):
-        print_desc()
         print(
             f"""
             Welcome to {self.name}
@@ -172,7 +169,6 @@ class ASMBase:
             print(open("/flag").read())
         else:
             print("Sorry, no flag :(.")
-            print_exit()
         return won
 
 

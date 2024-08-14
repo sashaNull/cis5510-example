@@ -3,7 +3,6 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <errno.h>
-#include"util.h"
 
 
 void print_flag()
@@ -32,20 +31,27 @@ void print_flag()
 int bypass_me(char *buf)
 {
 	int flag = 1;
-	int num;
+	int num1;
+	long long num2;
 	
 	if (buf[0] != 'p' || buf[1] != 0x15) {
 		flag = 0;
 		goto out; 
 	}
 
-	memcpy(&num, buf + 2, 4);
-	if (num != 123456789) {
+	memcpy(&num1, buf + 2, 4);
+	if (num1 != 123456789) {
 		flag = 0;
 		goto out;
 	}
 
-	if (strncmp(buf + 6, "Bypass Me:)", 11)) {
+	memcpy(&num2, buf + 6, 8);
+	if (num2 != 0) {
+		flag = 0;
+		goto out;
+	}
+
+	if (strncmp(buf + 14, "Bypass Me:)", 11)) {
 		flag = 0;
 		goto out;
 	}
@@ -58,7 +64,7 @@ int main()
 {
 	char buffer[100];
 
-	print_desc();
+	printf("Hi! I challenge you to use pwntools to pwn me :)\n");
 
 	fgets(buffer, sizeof(buffer), stdin);
 
@@ -69,6 +75,5 @@ int main()
 		printf("Please refer to the source code to understand these conditions\n");	
 	}
 
-	print_exit();
 	return 0;
 }

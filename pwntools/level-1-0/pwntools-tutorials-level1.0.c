@@ -3,8 +3,6 @@
 #include <string.h>
 #include <sys/stat.h>
 #include <errno.h>
-#include"util.h"
-
 
 void print_flag()
 {
@@ -44,7 +42,7 @@ int main()
 {
 	char buffer[100];
 
-	print_desc();
+	printf("Hi! I challenge you to use pwntools to pwn me :)\n");
 
 	fgets(buffer, sizeof(buffer), stdin);
 

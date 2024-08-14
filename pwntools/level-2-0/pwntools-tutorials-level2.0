@@ -13,9 +13,6 @@ from unicorn.x86_const import *
 from capstone import *
 
 sys.path.append('/challenge/')
-from util import *
-
-
 pwnlib.context.context.update(arch="amd64")
 builtin_print = print
 print = lambda text: builtin_print(re.sub("\n{2,}", "\n\n", textwrap.dedent(str(text))))
@@ -120,7 +117,6 @@ class ASMBase:
         self.emu.emu_start(begin, until)
 
     def run(self):
-        print_desc()
         print(
             f"""
             Welcome to {self.name}
@@ -141,7 +137,7 @@ class ASMBase:
             # assuming no hex-only assembly challenges
             if all((c in (string.hexdigits+string.whitespace).encode()) for c in self.asm):
                 print("")
-                print("ERROR: It looks like your input is hex-ecoded! Please provide")
+                print("ERROR: It looks like your input is hex-encoded! Please provide")
                 print("the actual unencoded bytes!")
                 sys.exit(1)
 
@@ -171,7 +167,6 @@ class ASMBase:
             print(open("/flag").read())
         else:
             print("Sorry, no flag :(.")
-            print_exit()
         return won
 
 
