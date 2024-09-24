@@ -11,9 +11,6 @@ description: |
 
 type: course
 
-award:
-  belt: bunny
-
 modules:
   - id: pwntools
 
